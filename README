@@ -1,0 +1,20 @@
+## What is it?
+
+This docker file sets up a standard apache and php environment which can be used to develop i.e. Wordpress.
+
+## Run it
+
+This command runs the container:
+
+```
+docker run -p 8181:80 -p 8143:443 -p 127.0.0.1:3306:3306 --name <your name> -v /<your path>/local/working/directory:/var/www/html grobmeier/docker-standard-apache24-php7
+```
+
+Your local MySQL server will be used. Usually you may want to link another Docker container running MySQL.
+
+You can reach the container using http://localhost:8181 or https://localhost:8143 
+
+## Acknowledgments
+
+This docker file is based on the Dockerfile found here:
+https://github.com/Solution360/dockerfile-apache2-php7-ioncube
